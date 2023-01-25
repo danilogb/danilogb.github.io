@@ -1,6 +1,6 @@
 title:              Danilo Brandão
 email:              brandaodanilog@gmail.com
-description:        Hello! I'm an engineer and data scientist based in Porto, Portugal, and I like to automate stuff and find interesting information hiding in data.
+description:        I'm an engineer and data scientist based in Porto, Portugal. I like to automate stuff and find interesting information hiding in data.
 author:             Danilo Brandão
 baseurl:            ""
 url:                "https://danilogb.github.io"
@@ -17,7 +17,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
-paginate:           2
+paginate:           4
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
