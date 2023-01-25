@@ -13,7 +13,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Hello! I'm {{ site.title }}.</h1>
+            <h1>Hello!<br> I'm {{ site.title }}.</h1>
             {% if site.description %}
             <span class="subheading">{{ site.description }}</span>
             {% endif %}
@@ -28,8 +28,10 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
+        
+        <h1 style="color:#404040 ! important;"><u>Latest Work</u></h1>
 
-        <h1>Latest Work</h1>
+        <hr>
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 2 %}
