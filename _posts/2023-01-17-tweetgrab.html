@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Tweetgrab"
+subtitle: "When you just need a few tweets to take a look at"
+date: 2023-17 10:45:13 -0000
+background: '/img/posts/tweettweet.jpg'
+---
+
+<p>Twitter is a popular social media platform that allows users to share short messages (tweets) with the world. With over 330 million active users and 500 million tweets being sent every day, Twitter is an enormous source of data. This data can be analyzed and used to understand various trends, opinions, and sentiments. But, before that data can be analyzed, it needs to be collected. This is where TweetGrab comes in.</p>
+
+<p>TweetGrab was created as a tool to enable Natural Language Processing and Social Network Analyses for the Complex Data Analysis course I took during my masters at the University of Porto. </p>
+
+<h2 class="section-heading">So what is TweetGrab?</h2>
+
+<p>TweetGrab is a Python application that retrieves public tweets from Twitter and stores them in a database. The tweets can be filtered based on specific keywords, hashtags, and dates. The application has been designed to be flexible and scalable, making it easy to retrieve and store large amounts of data.</p>
+
+<h2 class="section-heading">How does TweetGrab work?</h2>
+
+<p>TweetGrab uses the Tweepy library to connect to the Twitter API and retrieve tweets. The Tweepy library provides a simple and convenient interface for accessing the Twitter API. Once the tweets have been retrieved, they are inserted into a SQLite database for storage. SQLite is a lightweight and flexible database management system that is well suited for this task.</p>
+
+<p>The application has been designed to be modular, with separate modules for authentication and connecting to Twitter, for storing the data in a database, and for the main application functions. This makes it easy to maintain and extend the application.</p>
+
+<blockquote class="blockquote">The application has been designed to be modular</blockquote>
+
+<p>One interesting feature of TweetGrab is the ability to retrieve more than 100 tweets per query. The Twitter Search API has a rate limit of 180 requests per 15 minutes, with a maximum of 100 tweets per request. TweetGrab uses a loop and the items() method of the Cursor object from the Tweepy library to retrieve more than 100 tweets per query.</p>
+
+<h2 class="section-heading">Room for Improvement</h2>
+
+<p>There is no such thing as the perfect tool, and TweetGrab is no different. To get tweets from different time windows, one has to manually run the application more than once on different occasions. So scheduling and defining time periods for collection are two points for future implementation.</p>
+
+<h2 class="section-heading">Conclusion</h2>
+
+<p>TweetGrab is a powerful and flexible Python application that makes it easy to collect and store relatively large amounts of data from Twitter. Whether you're looking to analyze trends, opinions, or sentiments, TweetGrab is a great tool for the job. The application has been designed to be scalable and modular, making it easy to maintain and extend - which is important to me, since I plan to continue using it in the future.</p>
+
+<!-- <img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
+<span class="caption text-muted">Check the TweetGrab repository on my GitHub page.</span> -->
+
+<a href="https://github.com/danilogb/tweetgrab" target="_blank">
+    <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+</a>
+<span class="caption text-muted">Check out the TweetGrab repository on my GitHub page.</span>
+
+<p>Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
