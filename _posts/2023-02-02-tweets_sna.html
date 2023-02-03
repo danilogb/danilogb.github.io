@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Social Network Analysis and NLP of tweets"
+subtitle: "Exploring tweets about the Brazilian political scene"
+date: 2023-01-17 10:45:13 -0000
+background: '/img/posts/wehearyou.jpg'
+---
+<p><i>Project repository <u><a href="https://github.com/danilogb/politictweets_analysis" target="_blank">here</a></u>.</i></p>
+
+<p>Social network analysis is the process of investigating social structures through the use of networks and graph theory. It characterizes networked structures as nodes and edges- users and their tweets directed at others, in this case. This technique, along with others such as NLP, can be leveraged to help understand communication and behavior in online contexts.</p>
+
+<p>This project was developed for the Analysis of Complex Data course from the Masters in Data Science and Engineering</p>
+
+<h2 class="section-heading">Project goal</h2>
+
+<p>The goal of this project was to explore unstructured social media data from Twitter - tweets - using social network analysis and natural language processing in order to uncover relationships between users and help identify important actors in the network, as well as gain insights about the topics being discussed and the overall sentiment surrounding them.</p>
+
+<h2 class="section-heading">Implementation</h2>
+
+<p>Using the <a href="https://danilogb.github.io/2023/01/17/tweetgrab.html">TweetGrab</a> module, two searches for tweets were performed: one using the keyword "Lula" and the second using the keyword "Bolsonaro". The data was retrieved, stored in a SQLite database, read into a Pandas dataframe, and then preprocessed. Preprocessing included steps for cleaning the text itself, formatting datetime, reading the json structure, extracting hashtags, etc.</p>
+
+<p>For the sake of simplicity, a relationship between two users was defined as one person being mentioned in another's tweet. This is a very basic and simplistic model, but acceptable in the context of this work. With this being said, the network analysis ensued, using the NetworkX module for Python.</p>
+
+<blockquote class="blockquote" style="font-size: 60px !important;">"A relationship was defined as one person being mentioned in another's tweet."</blockquote>
+
+<p>To find sentiment embedded in the text, a classifier was trained on a dataset containing 300.000 tweets in Portuguese with binary sentiment labels (pos, neg).</p>
+
+<img src="bolsonaro_network.png" alt="Bolsonaro network">
+<span class="caption text-muted">The "Bolsonaro" network. The red dot is the central node.</span>
+
+<img src="nlp_results.png" alt="Some NLP results">
+<span class="caption text-muted">Some info regarding the NLP part</span>
+
+<h2 class="section-heading">Conclusion</h2>
+
+<p>There are several other - more complex and often better - ways to model online conversations. This was supposed to be a simple study that could illustrate the potential of NLP and social network analysis.</p>
+
+<p>Inspite of these simplifications, we were able to identify central nodes in both networks and take a peek at the topics flowing in them.</p>
+
+<h2 class="section-heading">Future work</h2>
+
+<p>There are many ways in which this work can be expanded. First, one could use a different definition for interaction between users, e.g. follower-followee, retweets, replies, etc.</p>
+
+<p>The documentation of the NetworkX module itself does not recommend their tool for creating network visualizations. Thus, another dedicated tool could be used for this purpose, such as Gephi, Graphviz or Cytoscape.</p>
+
+<p>Also, the tweet collection period could be expanded, as well as the sheer amount of tweets to be analyzed.</p>
+
+<p>Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
