@@ -25,7 +25,8 @@ background: '/img/posts/tweettweet.jpg'
 
 <p>One interesting feature of TweetGrab is the ability to retrieve more than 100 tweets per query. The Twitter Search API has a rate limit of 180 requests per 15 minutes, with a maximum of 100 tweets per request. TweetGrab uses a loop and the <code>pages()</code> method of the <code>Cursor</code> object from the Tweepy library to retrieve more than 100 tweets per query.</p>
 
-<pre># Connect to SQLite database
+<code>
+    # Connect to SQLite database
     conn = db.create_connection()
     
     # Retrieve tweets
@@ -38,7 +39,8 @@ background: '/img/posts/tweettweet.jpg'
             db.insert_tweet(conn, tweet)
             
     # Close database connection
-    conn.close()</pre>
+    conn.close()
+</code>
 
 <h2 class="section-heading">Room for Improvement</h2>
 
