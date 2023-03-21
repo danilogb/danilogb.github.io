@@ -23,7 +23,24 @@ background: '/img/posts/tweettweet.jpg'
 
 <blockquote class="blockquote" style="font-size: 60px !important;">"The application has been designed to be modular"</blockquote>
 
-<p>One interesting feature of TweetGrab is the ability to retrieve more than 100 tweets per query. The Twitter Search API has a rate limit of 180 requests per 15 minutes, with a maximum of 100 tweets per request. TweetGrab uses a loop and the <code>items()</code> method of the <code>Cursor</code> object from the Tweepy library to retrieve more than 100 tweets per query.</p>
+<p>One interesting feature of TweetGrab is the ability to retrieve more than 100 tweets per query. The Twitter Search API has a rate limit of 180 requests per 15 minutes, with a maximum of 100 tweets per request. TweetGrab uses a loop and the <code>pages()</code> method of the <code>Cursor</code> object from the Tweepy library to retrieve more than 100 tweets per query.</p>
+
+<pre><code id="python_code">
+    # Connect to SQLite database
+    conn = db.create_connection()
+    
+    # Retrieve tweets
+    for page in tqdm(tweepy.Cursor(api.search_tweets, 
+                                   q=search_term,
+                                   count=100).pages(100), 
+                    desc='Retrieving tweets:'):
+        for tweet in page:
+            # Insert tweet into database
+            db.insert_tweet(conn, tweet)
+            
+    # Close database connection
+    conn.close()
+</code></pre>
 
 <h2 class="section-heading">Room for Improvement</h2>
 
