@@ -19,6 +19,9 @@ background: '/img/posts/wehearyou.jpg'
 
 <p>Using the <a href="https://danilogb.github.io/2023/01/17/tweetgrab.html">TweetGrab</a> module, two searches for tweets were performed: one using the keyword "Lula" and the second using the keyword "Bolsonaro". The data was retrieved, stored in a SQLite database, read into a Pandas dataframe, and then preprocessed. Preprocessing included steps for cleaning the text itself, formatting datetime, reading the json structure, extracting hashtags, etc.</p>
 
+<img class="img-fluid" src="/img/posts/sna/tweetdf.png" alt="tweetdf">
+<span class="caption text-muted">Tweets dataframe.</span>
+
 <p>For the sake of simplicity, a relationship between two users was defined as one person being mentioned in another's tweet. This is a very basic and simplistic model, but acceptable in the context of this work. With this being said, the network analysis ensued, using the NetworkX module for Python.</p>
 
 <blockquote class="blockquote" style="font-size: 50px !important;">"A relationship was defined as one person being mentioned in another's tweet."</blockquote>
