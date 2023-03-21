@@ -24,9 +24,20 @@ background: '/img/posts/wehearyou.jpg'
 
 <p>For the sake of simplicity, a relationship between two users was defined as one person being mentioned in another's tweet. This is a very basic and simplistic model, but acceptable in the context of this work. With this being said, the network analysis ensued, using the NetworkX module for Python.</p>
 
-<blockquote class="blockquote" style="font-size: 50px !important;">"A relationship was defined as one person being mentioned in another's tweet."</blockquote>
+<p>Some network metrics such as degree, closeness and betweeness centrality were calculated in order to identify the central nodes.</p>
+
+<pre>
+    graph_centrality = nx.degree_centrality(largest_subgraph)
+    max_de = max(graph_centrality.items(), key=itemgetter(1))
+    graph_closeness = nx.closeness_centrality(largest_subgraph)
+    max_clo = max(graph_closeness.items(), key=itemgetter(1))
+    graph_betweenness = nx.betweenness_centrality(largest_subgraph, normalized=True, endpoints=False)
+    max_bet = max(graph_betweenness.items(), key=itemgetter(1))
+</pre>
 
 <p>To find sentiment embedded in the text, a classifier was trained on a dataset containing 300.000 tweets in Portuguese with binary sentiment labels (pos, neg).</p>
+
+<blockquote class="blockquote" style="font-size: 50px !important;">"A relationship was defined as one person being mentioned in another's tweet."</blockquote>
 
 <img class="img-fluid" src="/img/posts/bolsonaro_network.png" alt="Bolsonaro network">
 <span class="caption text-muted">The "Bolsonaro" network. The red dot is the central node.</span>
