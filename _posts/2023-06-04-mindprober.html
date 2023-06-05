@@ -1,0 +1,66 @@
+---
+layout: post
+title: "Chasing Goals"
+subtitle: "Analyzing spectators' reactions in sports events"
+date: 2023-06-04 10:45:13 -0000
+background: '/img/posts/soccerfieldline.jpg'
+---
+<p><i>Project repository <u><a href="https://github.com/danilogb/upgrade_challenge" target="_blank">here</a></u>.</i></p>
+
+<main>
+	<article>
+		<h3>Project Overview</h3>
+		<p>In March 2023, I signed up for a soft skills development program at the University of Porto. As part of the program, I had the opportunity to participate in a project with MindProber, a local Portuguese startup specializing in combining remote sensing and machine learning to measure emotional engagement metrics.</p>
+		<p>Our project focused on investigating the correlation between MindProber's proprietary data and metrics with sports events, specifically analyzing the 2022 FIFA World Cup. Our goal was to provide insights into how their data could be used to measure emotional engagement during sporting events.</p>
+
+		<h3>The Team</h3>
+		<p>The project was a collaborative effort involving a team of four individuals from diverse backgrounds:</p>
+		<ul>
+			<li>Danilo Brandao - Data Science (Team Lead)</li>
+			<li>António - Physics Engineering</li>
+			<li>Clara - Psychology</li>
+			<li>Renata - Biochemistry</li>
+		</ul>
+
+		<h3>Methodology</h3>
+		<p>To achieve our objectives, we followed a structured approach:</p>
+		<ol>
+			<li>Data Collection: We obtained data from the 2022 FIFA World Cup through the Statsbomb platform, which tracks various metrics from sports matches. Using Python and Pandas, we extracted the relevant events and organized them into data frames.</li>
+			<li>Metrics Calculation: We uploaded the synchronized spreadsheets to the MindProber platform to calculate audience impact scores for each event. This allowed us to quantify emotional engagement during the matches.</li>
+			<li>Analysis and Visualization: With the calculated metrics in hand, we performed an exploratory data analysis to gain insights into the correlation between MindProber's metrics and sports events. We investigated various factors such as goal probability, player influence, and high-impact zones on the field. We utilized visualizations, including heatmaps, shot maps, and time-series representations, to enhance our understanding of the data.</li>
+		</ol>
+        
+        <blockquote class="blockquote" style="font-size: 60px !important;">"To achieve our objectives, we followed a structured approach"</blockquote>
+
+		<h3>Results</h3>
+		<p>Our project yielded valuable insights into the correlation between MindProber's emotional engagement metrics and sports events. By analyzing data from the 2022 FIFA World Cup, we discovered the relationship between goal probability and audience response, identified influential players, and pinpointed high-impact zones on the field. These findings not only provided valuable insights to MindProber but also shed light on potential areas for further development and improvement.</p>
+
+        <img class="img-fluid" src="img/posts/mindprober/01_impact_goalxg.png" alt="Impact vs Goal expectation">
+        <span class="caption text-muted">Audience Impact vs Goal Expectation</span>
+
+        <img class="img-fluid" src="img/posts/mindprober/02_starplayers_impact.png" alt="Star Players Impact">
+        <span class="caption text-muted">Average impact of star players</span>
+
+        <img class="img-fluid" src="img/posts/mindprober/03_impact_country.png" alt="Impact by country">
+        <span class="caption text-muted">Average impact by country. This could be a proxy measure of who has the most engaged crowd.</span>
+
+        <img class="img-fluid" src="img/posts/mindprober/04_shots_blocks.png" alt="Impact of shots vs blocks">
+        <span class="caption text-muted">Impact of shots vs blocks across the playing field.</span>
+
+        <img class="img-fluid" src="img/posts/mindprober/05_impactzones.png" alt="Impact zones">
+        <span class="caption text-muted">Map and zones of high impact.</span>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nf7Zm2PvNBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+        <h3>Conclusion</h3>
+		<p>Overall, the project was a fantastic opportunity to apply data science skills I have acquired up until now to a real-world problem. Working with messy, real-world data challenged us to think critically and develop creative solutions. We are proud of the impact our project made and the value it brought to MindProber.</p>
+		<p>Thank you for reading about our MindProber Sports Analysis project!</p>
+
+        <p>Header photograph by <a href="https://unsplash.com/">Unsplash</a>.</p>
+	</article>
+</main>
+
+<footer>
+	<p>&copy; 2023 Danilo Brandao. All rights reserved.</p>
+</footer>
